@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="resume-container">
+    <header class="resume-header">
+        <h1>{{ resume.name }}</h1>
+        <h2>{{ resume.position }}</h2>
+        <p class="summary">{{ resume.about }}</p>
+    </header>
+
+    <section class="contact-section">
+        <h3>Контакты</h3>
+        <ul>
+            <li>Email: {{ resume.contacts.email }}</li>
+            <li>Телефон: {{ resume.contacts.phone }}</li>
+            <li>GitHub: <a href="https://{{ resume.contacts.github }}" target="_blank">{{ resume.contacts.github }}</a></li>
+        </ul>
+    </section>
+
+    <section class="education-section">
+        <h3>Образование</h3>
+        <div class="education-item">
+            <h4>{{ resume.education.university }}</h4>
+            <p>{{ resume.education.faculty }}</p>
+            <p class="education-period">{{ resume.education.year }}</p>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <h3>Технические навыки</h3>
+        <div class="skills-grid">
+            {% for category, skills in resume.tech_skills.items() %}
+            <div class="skill-category">
+                <h4>{{ category|capitalize }}</h4>
+                <ul>
+                    {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}
