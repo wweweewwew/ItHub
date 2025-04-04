@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import datetime  # Импортируем модуль полностью
+import datetime
 
 app = Flask(__name__)
 
