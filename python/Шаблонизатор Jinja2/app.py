@@ -5,7 +5,7 @@ app = Flask(__name__)
 resume_data = {
     "name": "Наджафов Даниил",
     "position": "Студент кафедры веб-разработки",
-    "about": "Специализируюсь на full-stack веб-разработке. Готов к стажировкам и проектной работе.",
+    "about": "Специализируюсь на front-end веб-разработке. Готов к стажировкам и проектной работе.",
     "contacts": {
         "email": "tprpra6@gmail.com",
         "phone": "+7 (952) 233-04-77",
@@ -23,7 +23,6 @@ resume_data = {
         "tools": ["Git"]
     }
 }
-
 @app.route('/')
 def resume():
     return render_template('index.html', resume=resume_data)

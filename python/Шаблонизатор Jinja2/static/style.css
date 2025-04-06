@@ -1,9 +1,9 @@
 :root {
-    --primary-bg: #001026;      /* Тёмно-синий фон */
-    --primary-text: #D4AF37;    /* Золотой текст */
-    --secondary-text: #a97c00;  /* Светло-золотой для второстепенного текста */
-    --accent-dark: #142F4B;     /* Акцентный тёмно-синий */
-    --container-bg: #00132d;    /* Фон контейнера резюме */
+    --primary-bg: #001026;
+    --primary-text: #D4AF37;
+    --secondary-text: #a97c00;
+    --accent-dark: #142F4B;
+    --container-bg: #00132d;
     --section-border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
@@ -134,6 +134,11 @@ h3::after {
     border-radius: 5px;
     border-left: 3px solid var(--primary-text);
     backdrop-filter: blur(5px);
+}
+
+
+.skill-category:hover {
+    background-color: rgba(212, 175, 55, 0.2);
 }
 
 .skill-category h4 {
