@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="cardForm">
+            <input type="text" id="bankName" placeholder="Название банка"><br>
+            <select id="paymentSystem">
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="amex">American Express</option>
+            </select><br>
+            <input type="text" id="cardNumber" placeholder="Номер карты" maxlength="16"><br>
+            <div id="cardNumberError" class="error-message">Номер карты должен содержать только цифры</div>
+            <input type="text" id="cardHolder" placeholder="Имя держателя"><br>
+
+            <select id="expMonth">
+                <option value="">Месяц</option>
+            </select>
+
+            <select id="expYear">
+                <option value="">Год</option>
+            </select><br>
+
+            <button type="submit">Добавить карту</button>
+        </form>
+
+        <div class="card-preview">
+            <div class="card-header">
+                <div class="card-logo" id="previewBank"></div>
+                <i class="payment-logo" id="previewPayment"></i>
+            </div>
+            <div class="card-number" id="previewNumber">•••• •••• •••• ••••</div>
+            <div class="card-footer">
+                <div id="previewHolder">ИМЯ ДЕРЖАТЕЛЯ</div>
+                <div id="previewExpiry">ММ/ГГ</div>
+            </div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Банк</th>
+                <th>Платежная система</th>
+                <th>Номер карты</th>
+                <th>Держатель</th>
+                <th>Срок действия</th>
+            </tr>
+        </thead>
+        <tbody id="cardsTable">
+        </tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>
